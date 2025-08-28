@@ -59,8 +59,6 @@ export default function JobsPage() {
   return (
     <div className="jobs-container">
       <h1 className="title">Job Hunter</h1>
-
-      {/* Search + Filters */}
       <div className="filters">
         <input
           type="text"
@@ -90,21 +88,19 @@ export default function JobsPage() {
         </select>
       </div>
 
-      {/* Crawl Button */}
       <div className="crawl-section">
+        <p>{total} jobs found</p>
         <button onClick={runCrawler} className="crawl-btn">
           Fetch More Jobs
         </button>
       </div>
 
-      {/* Job Cards */}
       <div className="jobs-list">
         {jobs.map((job) => (
           <JobCard key={job.id} job={job} />
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="pagination">
         <button
           onClick={() => setPage((p) => Math.max(p - 1, 1))}
@@ -135,7 +131,6 @@ export default function JobsPage() {
         </select>
       </div>
 
-      {/* Toast Container */}
       <ToastContainer position="bottom-right" />
     </div>
   );

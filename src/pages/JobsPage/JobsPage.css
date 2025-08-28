@@ -72,12 +72,13 @@
     border-radius: 4px;
   }
   .crawl-section {
+    display:flex;
+    justify-content: space-between;
     margin: 20px 0;
-    text-align: right;
   }
   
   .crawl-btn {
-    padding: 8px 16px;
+    padding: 4px 8px;
     background: #28a745;
     color: #fff;
     font-size: 14px;
@@ -89,5 +90,13 @@
   
   .crawl-btn:hover {
     background: #218838;
+  }
+  
+
+  .job-count {
+    margin: 1rem 0;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
   }
   
