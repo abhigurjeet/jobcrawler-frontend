@@ -13,7 +13,7 @@ export default function JobsPage() {
   const [filters, setFilters] = useState({
     title: "",
     company: "",
-    location: "",
+    category: "",
     sort: "createdAt",
   });
 
@@ -74,9 +74,9 @@ export default function JobsPage() {
         />
         <input
           type="text"
-          placeholder="Filter by location..."
-          value={filters.location}
-          onChange={(e) => setFilters({ ...filters, location: e.target.value })}
+          placeholder="Filter by category..."
+          value={filters.category}
+          onChange={(e) => setFilters({ ...filters, category: e.target.value })}
         />
         <select
           value={filters.sort}
