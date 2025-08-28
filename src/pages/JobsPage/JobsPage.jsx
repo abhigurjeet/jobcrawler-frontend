@@ -30,7 +30,7 @@ export default function JobsPage() {
   };
 
   const runCrawler = async () => {
-    const loadingToast = toast.loading("Crawling jobs, please wait...");
+    const loadingToast = toast.loading("Crawling jobs... Meanwhile continue exploring");
     try {
       const res = await axios.get(`${import.meta.env.VITE_LOCAL_SERVER_ADDRESS}/run-crawler`);
       toast.update(loadingToast, {
